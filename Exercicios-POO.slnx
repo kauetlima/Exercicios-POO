@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="Exercicios-POO/Exercicios-POO.csproj" />
+  <Project Path="EX2 CLASSE LIVRO/EX2 CLASSE LIVRO.csproj" Id="d1563a5e-4c78-4841-bc44-f5cf2a8fa7d7" />
+  <Project Path="EX3 CLASSE CARRO/EX3 CLASSE CARRO.csproj" Id="e479374c-bde4-4693-b4ed-12485825666f" />
+  <Project Path="Exercicios-POO/EX1 CLASSE CONTA BANCARIA.csproj" />
 </Solution>
