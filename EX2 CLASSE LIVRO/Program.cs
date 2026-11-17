@@ -11,18 +11,26 @@ Livro[] livros = new Livro[numeroLivros];
 
 Livro CadastraLivros()
 {
-    Console.WriteLine($"Digite o titulo do livro:");
-    titulo = Console.ReadLine();
-    Console.WriteLine($"Digite o autor do livro :");
-    autor = Console.ReadLine();
-    Console.WriteLine($"Digite quantas páginas o livro possui:");
-    numeroPaginas = int.Parse(Console.ReadLine());
+
+        Console.WriteLine($"Digite o titulo do livro:");
+        titulo = Console.ReadLine();
+        Console.WriteLine($"Digite o autor do livro :");
+        autor = Console.ReadLine();
+    do
+    {
+        
+        Console.WriteLine($"Digite quantas páginas o livro possui:");
+        numeroPaginas = int.Parse(Console.ReadLine());
+        if (numeroPaginas <= 0)
+        {
+            Console.WriteLine($"Não existem livros com qunatidade de páginas igual a {numeroPaginas}. Aperte enter para continuar");
+            Console.ReadKey();
+        }
+        Console.Clear();
+    } while (numeroPaginas <=0 );
 
     Livro l = new(titulo, autor, numeroPaginas);
-    Console.Clear();
-
     return l;
-
 }
 void PopulaLivros()
 {

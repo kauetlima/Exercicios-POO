@@ -16,26 +16,42 @@
     {
         Titulo = titulo; 
     }
-
     public void SetAutor(string autor)
     {
         Autor = autor;
     }
-
     public void SetNumeroPaginas(int numeroPaginas)
     {
-        NumeroPaginas = numeroPaginas;
+        if (ValidaPaginas(numeroPaginas))
+        {
+            NumeroPaginas = numeroPaginas;
+        }
+        else
+        { 
+            Console.WriteLine("Não existem livros com essa numeração de página.");
+            Console.ReadKey();
+
+        }
     }
+
     public string GetTitulo()
     {
         return Titulo;
     }
-
     public string GetAutor()
     {
         return Autor;
     }
 
+    public bool ValidaPaginas(int numeroPaginas)
+    {
+        if (NumeroPaginas <= 0)
+        {
+            return false;
+        }
+        else
+            return true;
+    }
     public int GetNumeroPaginas()
     {
         return NumeroPaginas;
